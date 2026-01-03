@@ -1,0 +1,45 @@
+.shiny-text {
+  color: #000000; /* Black text color as fallback */
+  background: linear-gradient(
+    120deg,
+    #000000 42%,
+    #e0e0e0 50%,
+    #000000 58%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
+
+/* Dark theme support */
+.dark .shiny-text {
+  color: #ffffff; /* White text color as fallback for dark theme */
+  background: linear-gradient(
+    120deg,
+    #ffffff 42%,
+    #666666 50%,
+    #ffffff 58%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
+

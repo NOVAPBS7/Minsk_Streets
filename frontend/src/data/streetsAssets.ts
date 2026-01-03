@@ -1,0 +1,2 @@
+export const heroImages = import.meta.glob('../../assets/hero/*.{webp,jpg,jpeg,png,mp4}', { eager: true, query: '?url', import: 'default' });
+export const streetImages = import.meta.glob('../../assets/streets/**/*.{webp,jpg,jpeg,png,mp4}', { eager: true, query: '?url', import: 'default' });
